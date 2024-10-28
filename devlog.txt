@@ -1,0 +1,4 @@
+adityaA -- 2024-10-25 23:37: Updated design doc with explanations for features of login and logout
+kevinL -- 2024-10-27 7:03: 
+ziyadH -- 2024-10-28 0:14: 
+jaydenZ -- 2024-10-28 8:00: 
