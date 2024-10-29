@@ -1,4 +1,4 @@
 adityaA -- 2024-10-25 23:37: Updated design doc with explanations for features of login and logout.
 kevinL -- 2024-10-27 7:03: Clarified questions about the database and added new features
-ziyadH -- 2024-10-28 0:14: 
+ziyadH -- 2024-10-28 0:14: Clarified time format of time used in database.
 jaydenZ -- 2024-10-28 7:41: Fixed and added more specific terminology, fixed database logic, fixed non-specific areas like time-stamp and what "clear and concise" means.
