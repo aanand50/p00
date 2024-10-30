@@ -30,7 +30,7 @@ Navigate to app directory in project directory:
  $ cd ./PATH/TO/p00/app
 Run App:
 
- $ python3 app.py
+ $ python3 \_init_.py
 A link will appear in the terminal. Open the link to be brought to the website.
 
  * Running on http://127.0.0.1:5000
