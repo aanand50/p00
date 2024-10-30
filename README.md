@@ -9,6 +9,8 @@ Ziyad - Backend Python
 
 Jayden - HTML/CSS
 
+<h1>Abstract</h1>
+Users will be able to sign up and log in for their unique story-telling experience. 
 
 <h1>Install Guide</h1>
 
