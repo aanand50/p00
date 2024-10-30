@@ -33,6 +33,7 @@ $ . <environment_name>/bin/activate
 Navigate to app directory in project directory:
 
  $ cd ./PATH/TO/p00/app
+ 
 Run App:
 
  $ python3 \_init_.py
