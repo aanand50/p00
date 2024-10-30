@@ -21,3 +21,6 @@ Filled requirements.txt after using pip freeze
 
 adityaA -- 2024-10-29 11:47:
 Updated readme with roster, install guide, and launch code; made and added team flag; ensured app.py runs, will add to it at a later point
+
+kevinL -- 2024-10-29 11:47:
+Started working on the database and html
