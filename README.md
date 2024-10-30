@@ -27,6 +27,9 @@ Install dependencies:
 
  $ pip install -r requirements.txt
 <h1>Launch Codes</h1>
+Activate virtual environment
+$ . <environment_name>/bin/activate
+
 Navigate to app directory in project directory:
 
  $ cd ./PATH/TO/p00/app
