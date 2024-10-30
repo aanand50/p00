@@ -2,6 +2,7 @@
 <h1>Roster</h1>
 Aditya - PM, Flask Server
 
+
 Kevin - Database SQLite
 
 Ziyad - Backend Python
@@ -20,7 +21,7 @@ Navigate to project directory
 
  $ cd PATH/TO/p00
  
-Install dependencies
+Install dependencies:
 
  $ pip install -r requirements.txt
 <h1>Launch Codes</h1>
@@ -29,7 +30,7 @@ Navigate to app directory in project directory:
  $ cd ./PATH/TO/p00/app
 Run App:
 
- $ python3 ./__init__.py
+ $ python3 app.py
 A link will appear in the terminal. Open the link to be brought to the website.
 
  * Running on http://127.0.0.1:5000
