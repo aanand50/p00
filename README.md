@@ -1,8 +1,13 @@
 # P00: Interactive Storytelling by HAZL
+<h1>Roster</h1>
 Aditya - PM, Flask Server
+
 Kevin - Database SQLite
+
 Ziyad - Backend Python
+
 Jayden - HTML/CSS
+
 
 <h1>Install Guide</h1>
 
@@ -18,7 +23,7 @@ Navigate to project directory
 Install dependencies
 
  $ pip install -r requirements.txt
-Launch Codes
+<h1>Launch Codes</h1>
 Navigate to app directory in project directory:
 
  $ cd ./PATH/TO/p00/app
