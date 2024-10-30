@@ -24,3 +24,6 @@ Updated readme with roster, install guide, and launch code; made and added team 
 
 kevinL -- 2024-10-29 11:47:
 Started working on the database and html
+
+jaydenZ -- 2024-10-30 11:47:
+Finished the HTML file for the Home Page. Added the headers for each of the remaining pages as well.
