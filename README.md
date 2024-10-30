@@ -4,7 +4,7 @@ Kevin - Database SQLite
 Ziyad - Backend Python
 Jayden - HTML/CSS
 
-Install Guide
+<h1>Install Guide</h1>
 
 Cloning the Project:
 
