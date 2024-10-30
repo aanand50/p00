@@ -11,7 +11,13 @@ jaydenZ -- 2024-10-28 7:41:
 Fixed and added more specific terminology, fixed database logic, fixed non-specific areas like time-stamp and what "clear and concise" means.
 
 adityaA -- 2024-10-28 11:47: 
-Conversed, updated eachother on the changes we made to the design doc, shown above.
+Conversed, updated each other on the changes we made to the design doc, shown above.
 
 jaydenZ -- 2024-10-29 11:47:
 Added the HTML files and CSS files with filler text to edit at a later period. Followed the component map.
+
+ziyadH -- 2024-10-29 11:47:
+Filled requirements.txt after using pip freeze
+
+adityaA -- 2024-10-29 11:47:
+Updated readme with roster, install guide, and launch code; made and added team flag; ensured app.py runs, will add to it at a later point
