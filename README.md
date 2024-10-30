@@ -5,6 +5,7 @@ Ziyad - Backend Python
 Jayden - HTML/CSS
 
 Install Guide
+
 Cloning the Project:
 
 In terminal, clone the repository to your local machine:
@@ -13,6 +14,7 @@ In terminal, clone the repository to your local machine:
 Navigate to project directory
 
  $ cd PATH/TO/p00
+ 
 Install dependencies
 
  $ pip install -r requirements.txt
