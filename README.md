@@ -50,4 +50,4 @@ $ python3 -m venv <envionrment_name>
 
 OR 
 
-```python http://localhost```
+```http://localhost```
