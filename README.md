@@ -1,12 +1,9 @@
 # P00: Interactive Storytelling by HAZL
 <h1>Roster</h1>
-Aditya - PM, Flask Server
-
-Kevin - Database SQLite
-
-Ziyad - Backend Python
-
-Jayden - HTML/CSS
+Aditya - PM, Flask Server <br>
+Kevin - Database SQLite <br>
+Ziyad - Backend Python <br>
+Jayden - HTML/CSS <br>
 
 <h1>Abstract</h1>
 Users will be able to sign up and log in for their unique story-telling experience. 
