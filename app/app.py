@@ -1,16 +1,7 @@
-# Kevin Lin, Raymond Lin, Christopher Louie
-# Death Row Coders
-# SoftDev
-# October 11, 2024
-# 1
-
 import os
-from flask import Flask
-from flask import render_template
-from flask import request
-from flask import session
-from flask import redirect
+from flask import Flask, render_template, request, redirect, url_for, session
 import sqlite3
+
 
 app = Flask(__name__)
 secret = os.urandom(32)
@@ -27,10 +18,10 @@ def length(a):
     return len(a) - len(a.replace(" ", ""))
 
 @app.route("/")
-def disp_loginpage():
+def homepage():
     if 'username' in session:
         return redirect("/response.html")
-    return render_template( 'login.html' )
+    return redirect(url_for("login"))
 
 @app.route("/response.html" , methods=['POST'])
 def authenticate():
@@ -44,7 +35,7 @@ def authenticate():
 
         db.commit()
         db.close()
-        
+
     return render_template( 'response.html', username = session['username'])
 
 #@app.route("/stories")
@@ -53,12 +44,15 @@ def view():
     if(length(text) < wordCount):
         c.execute("INSERT INTO usertext(user,storyid,text) VALUES (?,?,?);", (session['username'],session['storyid'] ,session['text']))
 
+@app.route("/login")
+def login():
+    return render_template("login.html", projectName="projectName PH")
+
 @app.route("/logout")
 def logout():
     session.pop('username', None)
     return render_template('logout.html')
-    
-if __name__ == "__main__":
-    app.debug = True 
-    app.run()
 
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
