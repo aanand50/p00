@@ -10,7 +10,7 @@ Clarified time format of time used in database.
 jaydenZ -- 2024-10-28 7:41: 
 Fixed and added more specific terminology, fixed database logic, fixed non-specific areas like time-stamp and what "clear and concise" means.
 
-adityaA -- 2024-10-28 11:47: 
+adityaA, kevinL, jaydenZ, ziyadH -- 2024-10-28 11:47: 
 Conversed, updated each other on the changes we made to the design doc, shown above.
 
 jaydenZ -- 2024-10-29 11:47:
@@ -28,5 +28,11 @@ Started working on the database and html
 jaydenZ -- 2024-10-30 11:47:
 Finished the HTML file for the Home Page. Added the headers for each of the remaining pages as well.
 
-Summary of ReadMe:
+kevinL -- 2024-10-30 11:47:
+Finished the database method for storing new users
 
+adityaA -- 2024-10-30 11:47:
+Conversed with emissary from Team SCAM. Using feedback from discussion, formatted README using headings and code format. Started abstract.
+
+ziyadH -- 2024-10-30 23:11:
+Traveled to team sexy mermaids as emissary and jotted down notes; relayed findings with team

@@ -5,5 +5,12 @@ p00
 2024-10-
 time spent: 
  */
+
+header {
+    display: flex;
+    align-items: center;
+}
+
 body {
+
     }

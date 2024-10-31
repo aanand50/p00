@@ -12,30 +12,42 @@ Users will be able to sign up and log in for their unique story-telling experien
 
 Cloning the Project:
 
-In terminal, clone the repository to your local machine:
+1. In the terminal, clone the repository to your local machine via GitHub's SSH Clone Option:
 
- $ git clone git@github.com:aanand50/p00.git
-Navigate to project directory
+ ```$ git clone git@github.com:aanand50/p00.git```
 
- $ cd PATH/TO/p00
+2. Navigate to project directory:
+
+```$ cd PATH/TO/p00```
+
+3. Create a virtual environment by running: 
+
+$ python3 -m venv <envionrment_name>
+
+4. Activate virtual environment
+
+```$ . <environment_name>/bin/activate```
+
+(* IF DONE CORRECTLY, the name of your virtual environment should appear first on the command line before the paths! *)
  
-Install dependencies:
+5. Install dependencies:
 
- $ pip install -r requirements.txt
+```$ pip install -r requirements.txt```
+
 <h1>Launch Codes</h1>
 
-Activate virtual environment
+1. Navigate to app directory in project directory:
 
-<code>$ . <environment_name>/bin/activate </code>
-
-Navigate to app directory in project directory:
-
- $ cd ./PATH/TO/p00/app
+```$ cd ./PATH/TO/p00/app.py```
  
-Run App:
+2. Run App:
 
- $ python3 \_init_.py
+```$ python3 app/_init_.py```
  
-A link will appear in the terminal. Open the link to be brought to the website.
+3. A link will appear in the terminal. Open the link (cntrl + click OR manually entering) to be brought to the website.
 
- * Running on http://127.0.0.1:5000
+```http://127.0.0.1:5000```
+
+OR 
+
+```http://localhost```
