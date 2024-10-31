@@ -36,3 +36,9 @@ Conversed with emissary from Team SCAM. Using feedback from discussion, formatte
 
 ziyadH -- 2024-10-30 23:11:
 Traveled to team sexy mermaids as emissary and jotted down notes; relayed findings with team
+
+kevinL -- 2024-10-31 11:58
+Worked on integrating databse with html files
+
+jaydenZ -- 2024-10-31 11:58:
+Finished Login HTML and CSS.
