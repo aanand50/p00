@@ -36,6 +36,7 @@ def register():
     c = db.cursor()
     c.execute("SELECT * FROM users WHERE username="+"'"+request.form.get('username')+"'"+";")
     user = c.fetchone()
+    if(user != None and request.form.get('password') == 
     if(request.form.get('username') != None and user == None): #Only change username if it's not none
         session['username'] = request.form.get('username')
         session['password'] = request.form.get('password')
