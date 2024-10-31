@@ -14,7 +14,7 @@ Cloning the Project:
 
 1. In the terminal, clone the repository to your local machine via GitHub's SSH Clone Option:
 
-```$ git clone git@github.com:aanand50/p00.git```
+ ```$ git clone git@github.com:aanand50/p00.git```
 
 2. Navigate to project directory:
 
