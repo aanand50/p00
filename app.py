@@ -28,24 +28,23 @@ def length(a):
 
 @app.route("/")
 def disp_loginpage():
-    if 'username' in session:
-        return redirect("/response.html")
     return render_template( 'login.html' )
 
 @app.route("/response.html" , methods=['POST'])
 def register():
-    if(request.form.get('username') != None and session.get('username') == None): #Only change username if it's not none
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    c.execute("SELECT * FROM users WHERE username="+"'"+request.form.get('username')+"'"+";")
+    user = c.fetchone()
+    if(request.form.get('username') != None and user == None): #Only change username if it's not none
         session['username'] = request.form.get('username')
         session['password'] = request.form.get('password')
 
-        db = sqlite3.connect(DB_FILE)
-        c = db.cursor()
         c.execute("INSERT INTO users(username,password) VALUES (?,?);", (session['username'],session['password']))
 
         db.commit()
         db.close()
-        
-    return render_template( 'response.html', username = session['username'])
+    return render_template( 'homePage.html')
 
 #@app.route("/stories")
 def view():

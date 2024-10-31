@@ -23,18 +23,19 @@ time spent:
     </header>
     <div class="signup">
         <h1>Sign Up</h1>
-        <input placeholder="Make a Username"></input>
-        <input placeholder="Make a Password"></input>
-        <button>Sign Up</button>
+        <form action="/response.html" method="POST">
+        <input type="text" name="username" placeholder="Make a Username">
+        <input type="text" name="password" placeholder="Make a Password">
+        <input type="submit" value="Sign Up">
+        </form>
     </div>
     <div class="login">
         <h1>Log In</h1>
         <form action="/response.html">
-        <input type="text" name="username">
-        <input type="text" name="password">
-        <input type="submit" name="sub1">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="password" placeholder="Password">
+        <input type="submit" value="Login">
         </form>
-        <button>Log In</button>
     </div>
 </body>
 
