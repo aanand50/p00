@@ -9,7 +9,7 @@ time spent:
 -->
 
 <head>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/login.css">
 </head>
 
 <body>
@@ -21,6 +21,22 @@ time spent:
             <button>Logout</button>
         </div>
     </header>
+    <div class="signup">
+        <h1>Sign Up</h1>
+        <form action="/response.html" method="POST">
+        <input type="text" name="username" placeholder="Make a Username">
+        <input type="text" name="password" placeholder="Make a Password">
+        <input type="submit" value="Sign Up">
+        </form>
+    </div>
+    <div class="login">
+        <h1>Log In</h1>
+        <form action="/response.html" method="POST">
+        <input type="text" name="usernameL" placeholder="Username">
+        <input type="text" name="passwordL" placeholder="Password">
+        <input type="submit" value="Login">
+        </form>
+    </div>
 </body>
 
 </html>

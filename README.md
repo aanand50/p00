@@ -6,7 +6,7 @@ Ziyad - Backend Python <br>
 Jayden - HTML/CSS <br>
 
 <h1>Description</h1>
-Users will be able to contribute to or create community-driven stories. First, users will be asked to login to or sign up for an account. They will be then given the choice to view existing stories or create their own. If they choose to view, they will be shown the latest entries in each story and prompted to add to a story. Once they submit, they will be able to view their contributions but not edit them. Alternatively, they can choose to start their own story and add a title. Afterwards, all stories that the user contributed to wwill be displayed to user. Once they are done, they can logout, which will display a confirmation screen.
+As users travel in The Land of Stories, they will be able to contribute to or create community-driven stories! First, they will be asked to log in to or sign up for an account. They will then be given the choice to view existing stories or create their own. If they choose to view, users will be shown the latest entries in each story and prompted to add to a story. Once they submit, they will be able to view their contributions but not edit them. Alternatively, they can choose to start their own story and add a title. Afterward, all stories that were contributed to will be displayed to the user. Once they are done, they can logout, which will display a confirmation screen.
 
 <h1>Install Guide</h1>
 
