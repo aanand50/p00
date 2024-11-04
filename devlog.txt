@@ -45,3 +45,6 @@ Finished Login HTML and CSS.
 
 adityaA -- 2024-10-31 11:47:
 Completed abstract/description in README, reviewed app.py. Checked in with team to discuss progress and made plan for weekend/next week.
+
+ziyadH -- 2024-10-31 11:58:
+started flask implementation of login page, cleaned up app.py, moved templates folder to project folder
