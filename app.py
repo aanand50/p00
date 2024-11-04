@@ -1,9 +1,3 @@
-# Kevin Lin, Raymond Lin, Christopher Louie
-# Death Row Coders
-# SoftDev
-# October 11, 2024
-# 1
-
 import os
 from flask import Flask
 from flask import render_template
