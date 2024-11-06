@@ -35,13 +35,17 @@ time spent:
                <li>{{ instructions }}</li>
             {% endfor %}
             </ul>
-            <button>CREATE YOUR STORY</button>
+            <form action="/createStories.html">
+                <input type="submit" value="Create Your Story">
+            </form>
         </div>
             
         <div>
             <h1>New Stories!</h1>
             <p>{{ newStoriesDescription }}</p>
-            <button>VIEW ALL STORIES</button>
+            <form action="/newStories.html">
+                <input type="submit" value="View All Stories">
+            </form>
         </div>    
     </div>
 

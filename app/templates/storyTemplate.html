@@ -13,7 +13,40 @@ time spent:
 </head>
 
 <body>
+    <header>
+        <div>
+            <h1>HAZL</h1>
+        </div>
+        <div>
+            <h1>{{ projectName }}</h1>
+        </div>
+        <div>
+            <form action="/login.html">
+                <input type="submit" value="Login">
+            </form>
+            <form action="/logout.html">
+                <input type="submit" value="Logout">
+            </form>
+        </div>
+    </header>
 
+    {% if isLoggedIn %}
+        <input type="text" value="{{ title }}">
+        <input type="text" value="{{ description }}">
+        <input type="text" value="{{ sources }}">
+        <form action="/newStories.html">
+            <input type="submit" value="Submit Edits">
+        </form>
+    {% else %}
+        <h1>Login Before Editing!</h1>
+        <form action="/login.html">
+            <input type="submit" value="Login">
+        </form>
+    {% endif %}
+
+    <footer>
+        <p>Copyright @2024 HAZL</p>
+    </footer>
 </body>
 
 </html>

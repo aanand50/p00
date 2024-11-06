@@ -57,3 +57,6 @@ Worked on python files. Tested functions, relocated files (templates and python 
 
 kevinL -- 2024-11-05 21:00:
 Worked on adding stories to database.
+
+jaydenZ -- 2024-11-06 9:07:
+Finished the HTML side of the project. All CSS will be implemented after HTML is linked properly.
