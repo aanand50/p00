@@ -61,6 +61,10 @@ def create_story():
         c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('name')))
         c.execute("INSERT INTO usertext(user TEXT, story TEXT, text TEXT) VALUES (?,?,?);", (session['user'], request.form.get('name'), request.form.get('text')))
 
+@app.route('homepage.html')
+def home():
+    
+
 def edit():
     text = request.form.get("text")
     if(length(text) < wordCount):
