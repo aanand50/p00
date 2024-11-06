@@ -9,7 +9,7 @@ time spent:
 -->
 
 <head>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/storyTemplate.css">
 </head>
 
 <body>
@@ -21,27 +21,30 @@ time spent:
             <h1>{{ projectName }}</h1>
         </div>
         <div>
-            <form action="/login.html">
+            <form action="/login">
                 <input type="submit" value="Login">
             </form>
-            <form action="/logout.html">
+            <form action="/logout">
                 <input type="submit" value="Logout">
             </form>
         </div>
     </header>
-
+    
+    <div class="edit">
     {% if isLoggedIn %}
         <input type="text" value="{{ title }}">
         <input type="text" value="{{ description }}">
-        <input type="text" value="{{ sources }}">
-        <form action="/newStories.html">
+        <form action="/newStories">
             <input type="submit" value="Submit Edits">
         </form>
+    </div>
+    <div class="noEdit">
     {% else %}
         <h1>Login Before Editing!</h1>
-        <form action="/login.html">
+        <form action="/login">
             <input type="submit" value="Login">
         </form>
+    </div>
     {% endif %}
 
     <footer>
