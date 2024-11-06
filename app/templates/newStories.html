@@ -9,7 +9,7 @@ time spent:
 -->
 
 <head>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/newStories.css">
 </head>
 
 <body>
@@ -17,10 +17,10 @@ time spent:
         <div><h1>HAZL</h1></div>
         <div><h1>{{ projectName }}</h1></div>
         <div>
-            <form action="/login.html">
+            <form action="/login">
                 <input type="submit" value="Login">
             </form>
-            <form action="/logout.html">
+            <form action="/logout">
                 <input type="submit" value="Logout">
             </form>
         </div>
@@ -33,8 +33,7 @@ time spent:
                 <div>
                     <h1>{{ stories.title }}</h1>
                     <p>{{ stories.description }}</p>
-                    <p>{{ stories.sources }}</p>
-                    <form action="/storyTemplate.html">
+                    <form action="/storyTemplate">
                         <input type="submit" value="Login">
                     </form>
                 </div>
@@ -45,7 +44,6 @@ time spent:
             <div>
                 <h1>{{ stories.title }}</h1>
                 <p>{{ stories.description }}</p>
-                <p>{{ stories.sources }}</p>
             </div>
         </div>
         {% endif %}
