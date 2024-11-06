@@ -54,3 +54,6 @@ Worked out logic for newStories.html on whiteboard and implimented the code in H
 
 adityaA, ziyadH -- 2024-11-04 11:47:
 Worked on python files. Tested functions, relocated files (templates and python files).
+
+kevinL -- 2024-11-05 21:00:
+Worked on adding stories to database.
