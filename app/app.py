@@ -21,7 +21,8 @@ def length(a):
 #<<<<<<< HEAD:app/app.py
 def homepage():
     if 'username' in session:
-        return redirect("/response.html")
+        return redirect(url_for("home"))
+
     return redirect(url_for("login"))
 #=======
 def disp_loginpage():
@@ -53,17 +54,19 @@ def register():
 #<<<<<<< HEAD:app/app.py
 #=======
 #>>>>>>> refs/remotes/origin/main:app.py
-@app.route('createStories.html')
+@app.route('/createStories')
 def create_story():
-    db = sqlite3.connect(DB_FILE)
-    c = db.cursor()
-    if(request.form.get('name') != None && request.form.get('text') != None):
-        c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('name')))
-        c.execute("INSERT INTO usertext(user TEXT, story TEXT, text TEXT) VALUES (?,?,?);", (session['user'], request.form.get('name'), request.form.get('text')))
+    pass
+    #db = sqlite3.connect(DB_FILE)
+    #c = db.cursor()
+    #if(request.form.get('name') != None && request.form.get('text') != None):
+    #    c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('name')))
+    #    c.execute("INSERT INTO usertext(user TEXT, story TEXT, text TEXT) VALUES (?,?,?);", (session['user'], request.form.get('name'), request.form.get('text')))
 
-@app.route('homepage.html')
+@app.route('/homepage')
 def home():
-    
+    return render_template("homePage.html", projectName = "Land of Stories", description = "description")
+
 
 def edit():
     text = request.form.get("text")
