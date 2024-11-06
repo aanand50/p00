@@ -18,40 +18,50 @@ def length(a):
     return len(a) - len(a.replace(" ", ""))
 
 @app.route("/")
-<<<<<<< HEAD:app/app.py
+#<<<<<<< HEAD:app/app.py
 def homepage():
     if 'username' in session:
         return redirect("/response.html")
     return redirect(url_for("login"))
-=======
+#=======
 def disp_loginpage():
     return render_template( 'login.html' )
->>>>>>> refs/remotes/origin/main:app.py
+#>>>>>>> refs/remotes/origin/main:app.py
 
 @app.route("/response.html" , methods=['POST'])
 def register():
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    c.execute("SELECT * FROM users WHERE username="+"'"+request.form.get('username')+"'"+";")
-    user = c.fetchone()
-    if(user != None and request.form.get('password') == 
-    if(request.form.get('username') != None and user == None): #Only change username if it's not none
-        session['username'] = request.form.get('username')
-        session['password'] = request.form.get('password')
+    if(request.form.get('usernameL') != None):
+        c.execute("SELECT * FROM users WHERE username="+"'"+request.form.get('usernameL')+"'"+";")
+        user = c.fetchone()
+        if(user[1] == request.form.get('passwordL')):
+            session['username'] = user[0]
+            return render_template( 'homePage.html',projectName = session['username'])
+        else:
+            return render_template('login.html')
+    if(request.form.get('username') != None): #Only change username if it's not none
+        c.execute("SELECT * FROM users WHERE username="+"'"+request.form.get('username')+"'"+";")
+        user = c.fetchone()
+        if(user == None):
 
-        c.execute("INSERT INTO users(username,password) VALUES (?,?);", (session['username'],session['password']))
+            c.execute("INSERT INTO users(username,password) VALUES (?,?);", (request.form.get('username'),request.form.get('password')))
 
-        db.commit()
-        db.close()
-<<<<<<< HEAD:app/app.py
+            db.commit()
+            db.close()
+            return render_template('login.html')
+#<<<<<<< HEAD:app/app.py
+#=======
+#>>>>>>> refs/remotes/origin/main:app.py
+@app.route('createStories.html')
+def create_story():
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    if(request.form.get('name') != None && request.form.get('text') != None):
+        c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('name')))
+        c.execute("INSERT INTO usertext(user TEXT, story TEXT, text TEXT) VALUES (?,?,?);", (session['user'], request.form.get('name'), request.form.get('text')))
 
-    return render_template( 'response.html', username = session['username'])
-=======
-    return render_template( 'homePage.html')
->>>>>>> refs/remotes/origin/main:app.py
-
-#@app.route("/stories")
-def view():
+def edit():
     text = request.form.get("text")
     if(length(text) < wordCount):
         c.execute("INSERT INTO usertext(user,story,text) VALUES (?,?,?);", (session['username'],session['story'] ,session['text']))
