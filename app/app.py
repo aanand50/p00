@@ -24,9 +24,6 @@ def homepage():
         return redirect(url_for("home"))
 
     return redirect(url_for("login"))
-#=======
-def disp_loginpage():
-    return render_template( 'login.html' )
 #>>>>>>> refs/remotes/origin/main:app.py
 
 @app.route("/response.html" , methods=['POST'])
@@ -54,7 +51,7 @@ def register():
 #<<<<<<< HEAD:app/app.py
 #=======
 #>>>>>>> refs/remotes/origin/main:app.py
-<<<<<<< HEAD
+#<<<<<<< HEAD
 @app.route('/createStories.html')
 def create_story():
     db = sqlite3.connect(DB_FILE)
@@ -64,24 +61,11 @@ def create_story():
         c.execute("INSERT INTO usertext(user TEXT, story TEXT, text TEXT) VALUES (?,?,?);", (session['user'], request.form.get('title'), request.form.get('text')))
     return render_template('createStories.html')
 
-@app.route('/homepage.html')
-def home():
-    return render_template( 'homePage.html',projectName = session['username'])
-=======
-@app.route('/createStories')
-def create_story():
-    pass
-    #db = sqlite3.connect(DB_FILE)
-    #c = db.cursor()
-    #if(request.form.get('name') != None && request.form.get('text') != None):
-    #    c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('name')))
-    #    c.execute("INSERT INTO usertext(user TEXT, story TEXT, text TEXT) VALUES (?,?,?);", (session['user'], request.form.get('name'), request.form.get('text')))
-
 @app.route('/homepage')
 def home():
     return render_template("homePage.html", projectName = "Land of Stories", description = "description")
 
->>>>>>> 7aed623920691d71386d18c3f24d8cf783f32d8a
+#>>>>>>> 7aed623920691d71386d18c3f24d8cf783f32d8a
 
 def edit():
     text = request.form.get("text")
