@@ -60,3 +60,6 @@ Worked on adding stories to database.
 
 jaydenZ -- 2024-11-06 9:07:
 Finished the HTML side of the project. All CSS will be implemented after HTML is linked properly.
+
+ziyadH -- 2024-11-06 9:08:
+Continued implementing and fulfilling sitemap
