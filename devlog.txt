@@ -70,5 +70,8 @@ Updated app to init, changed value for description, tested program to identify a
 ziyadH -- 2024-11-06 19:27:
 Fully implemented flask and python middleware, fixed some errors
 
+kevinL -- 2024-11-06 20:00:
+Fully implemented database methods
+
 adityaA, kevinL, jaydenZ, ziyadH -- 2024-11-06 22:30: 
 Rehearsed presentation, tested code to make sure it works, designated roles
