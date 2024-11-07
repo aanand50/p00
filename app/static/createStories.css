@@ -1,0 +1,40 @@
+/*
+HAZL
+SoftDev
+p00
+2024-10-
+time spent: 
+ */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+}
+.containingDiv {
+    display: flex;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;    
+}
+
+.enterStory {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    flex-direction: column;
+    .text {
+        width: 50vw;
+        height: 20vh;
+    }
+}
+
+body {
+    
+    }

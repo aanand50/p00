@@ -1,0 +1,24 @@
+/*
+HAZL
+SoftDev
+p00
+2024-10-
+time spent: 
+ */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20vw;
+}
+
+.edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+body {
+    }
