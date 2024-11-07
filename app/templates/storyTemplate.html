@@ -46,7 +46,7 @@ time spent:
         </form>
     </div>
     <div class="noEdit">
-    {% else %}
+    {% elif not isLoggedIn %}
         <h1>Login Before Editing!</h1>
         <form action="/login">
             <input type="submit" value="Login">
