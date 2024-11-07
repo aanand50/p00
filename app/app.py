@@ -15,7 +15,7 @@ c.execute("CREATE TABLE IF NOT EXISTS stories(name TEXT);")
 c.execute("CREATE TABLE IF NOT EXISTS usertext(user TEXT, story TEXT, text TEXT);")
 
 def length(a):
-    return len(a) - len(a.replace(" ", ""))
+    return 1 + len(a) - len(a.replace(" ", ""))
 
 @app.route("/")
 def home():
@@ -52,24 +52,14 @@ def create_story():
         if(request.form.get('title') != "" and request.form.get('text') != "" and session.get('username') != None):
             c.execute("SELECT * FROM stories WHERE name = ?;",(request.form.get('title'),))
             story = c.fetchone()
-            if(story == None):
+            print(length(request.form.get('text')))
+            if(story == None and length(request.form.get('text')) < wordCount):
                 c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('title'),))
                 c.execute("INSERT INTO usertext(user, story, text) VALUES (?,?,?);", (session.get('username'), request.form.get('title'), request.form.get('text')))
                 db.commit()
                 db.close()
                 return redirect(url_for("home"))
     return render_template('createStories.html')
-
-def edit():
-    text = request.form.get("text")
-    if(length(text) < wordCount):
-        c.execute("INSERT INTO usertext(user,story,text) VALUES (?,?,?);", (session['username'],session['story'] ,session['text']))
-        db.commit()
-        db.close()
-
-def display():
-    c.execute("SELECT * FROM usertext WHERE story = ?;",(session.get('story'),))
-    #storyTex
 
 @app.route("/login")
 def login():
@@ -82,15 +72,19 @@ def logout():
     session.pop('username',None)
     return render_template("logout.html")
 
-@app.route("/newStories")
+@app.route("/newStories", methods=['GET','POST'])
 def newStories():
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
     c.execute("SELECT * FROM stories;")
     story_names = c.fetchall()
+    if(request.method == 'POST' and length(request.form.get('text')) < wordCount and request.form.get('text') != ""):
+        c.execute("INSERT INTO usertext(user,story,text) VALUES (?,?,?);", (session.get('username'),request.form.get('title'),request.form.get('text')))
+        db.commit()
+        db.close()
     return render_template("newStories.html", allStories = story_names)
 
-@app.route("/storyTemplate", methods=['GET'])
+@app.route("/storyTemplate", methods=['GET','POST'])
 def story_temp():
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
@@ -101,7 +95,13 @@ def story_temp():
             loggedin = True
         else:
             loggedin = False
-        return render_template("storyTemplate.html", storyText=story_text,isLoggedIn = loggedin,title=request.args.get('story'))
+        c.execute("SELECT * FROM usertext WHERE story = ? and user = ?;",(request.args.get('story'),session.get('username')))
+        ifEdited = c.fetchone()
+        if (ifEdited != None):
+            perm = False
+        else:
+            perm = True
+        return render_template("storyTemplate.html", storyText=story_text,isLoggedIn = loggedin,title=request.args.get('story'),new=perm)
     return render_template("newStories.html", allStories = story_names)
 
 if __name__ == "__main__":

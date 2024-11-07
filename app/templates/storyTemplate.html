@@ -38,8 +38,10 @@ time spent:
     {% endfor %}
     
     <div class="edit">
-    {% if isLoggedIn %}
-        <form action="/newStories">
+    {% if isLoggedIn and new %}
+        <form action="/newStories" method="POST">
+            <input type="hidden" name="title" value="{{ title }}">
+            <input type="text" name="text" placeholder="Enter Story Text">
             <input type="submit" value="Submit Edits">
         </form>
     </div>
