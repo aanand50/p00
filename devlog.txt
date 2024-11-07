@@ -63,3 +63,6 @@ Finished the HTML side of the project. All CSS will be implemented after HTML is
 
 ziyadH -- 2024-11-06 9:08:
 Continued implementing and fulfilling sitemap
+
+ziyadH -- 2024-11-06 19:27;
+Fully implemented flask and python middleware, fixed some errors

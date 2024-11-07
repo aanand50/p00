@@ -29,7 +29,7 @@ time spent:
     {% for stories in allStories %}
         <div>
             <h3>New Stories!</h3>
-            {% if stories.id >= totalID - 2}
+            {% if stories.id >= totalID - 2 %}
                 <div>
                     <h1>{{ stories.title }}</h1>
                     <p>{{ stories.description }}</p>
