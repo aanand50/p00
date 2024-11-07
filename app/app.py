@@ -49,13 +49,18 @@ def register():
 #=======
 #>>>>>>> refs/remotes/origin/main:app.py
 #<<<<<<< HEAD
-@app.route('/createStories')
+@app.route('/createStories', methods=['GET', 'POST'])
 def create_story():
     db = sqlite3.connect(DB_FILE)
     c = db.cursor()
-    if(request.form.get('title') != None and request.form.get('text') != None):
-        c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('name')))
-        c.execute("INSERT INTO usertext(user TEXT, story TEXT, text TEXT) VALUES (?,?,?);", (session['user'], request.form.get('title'), request.form.get('text')))
+    if(request.method == 'POST'):
+        if(request.form.get('title') != "" and request.form.get('text') != "" and session.get('username') != None):
+            c.execute("SELECT * FROM stories WHERE name = ?;",(request.form.get('title'),))
+            c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('title'),))
+            c.execute("INSERT INTO usertext(user, story, text) VALUES (?,?,?);", (session.get('username'), request.form.get('title'), request.form.get('text')))
+            db.commit()
+            db.close()
+            return redirect(url_for("home"))
     return render_template('createStories.html')
 
 #>>>>>>> 7aed623920691d71386d18c3f24d8cf783f32d8a
@@ -68,7 +73,7 @@ def edit():
         db.close()
 
 def display():
-    c.execute("SELECT * FROM usertext WHERE story="+session['story']+";")
+    c.execute("SELECT * FROM usertext WHERE story = ?;",(session.get('story'),))
     #storyTex
 
 @app.route("/login")
@@ -81,9 +86,6 @@ def login():
 def logout():
     session.pop('username',None)
     return render_template("logout.html")
-
-db.commit()
-db.close()
 
 if __name__ == "__main__":
     app.debug = True
