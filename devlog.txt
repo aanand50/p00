@@ -61,8 +61,14 @@ Worked on adding stories to database.
 jaydenZ -- 2024-11-06 9:07:
 Finished the HTML side of the project. All CSS will be implemented after HTML is linked properly.
 
-ziyadH -- 2024-11-06 9:08:
+ziyadH -- 2024-11-06 11:47:
 Continued implementing and fulfilling sitemap
 
-ziyadH -- 2024-11-06 19:27;
+adityaA -- 2024-11-06 11:47:
+Updated app to init, changed value for description, tested program to identify areas of improvement, met with TM for progress check, helped with flask
+
+ziyadH -- 2024-11-06 19:27:
 Fully implemented flask and python middleware, fixed some errors
+
+adityaA, kevinL, jaydenZ, ziyadH -- 2024-11-06 22:30: 
+Rehearsed presentation, tested code to make sure it works, designated roles
