@@ -73,5 +73,8 @@ Fully implemented flask and python middleware, fixed some errors
 kevinL -- 2024-11-06 20:00:
 Fully implemented database methods
 
+jaydenZ -- 2024-11-07 8:00:
+Finished the CSS side of the project. 
+
 adityaA, kevinL, jaydenZ, ziyadH -- 2024-11-06 22:30: 
 Rehearsed presentation, tested code to make sure it works, designated roles
