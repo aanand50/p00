@@ -19,7 +19,7 @@ def length(a):
 
 @app.route("/")
 def home():
-    return render_template("homePage.html", projectName = "Land of Stories", description = "description")
+    return render_template("homePage.html", projectName = "Land of Stories", description = "As users travel in The Land of Stories, they will be able to contribute to or create community-driven stories! First, they will be asked to log in to or sign up for an account. They will then be given the choice to view existing stories or create their own. If they choose to view, users will be shown the latest entries in each story and prompted to add to a story. Once they submit, they will be able to view their contributions but not edit them. Alternatively, they can choose to start their own story and add a title. Afterward, all stories that were contributed to will be displayed to the user. Once they are done, they can logout, which will display a confirmation screen.")
 
 @app.route("/response" , methods=['POST'])
 def register():
