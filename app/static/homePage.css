@@ -11,6 +11,41 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20vw;
+    background-color: lightcoral;
+    color: white;
+}
+
+.mission {
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgba(215, 253, 251, 0.45);
+    margin-bottom: 3px;
+    padding: 10px;
+    p {
+        margin-bottom: 3px;
+    }
+}
+
+.containingDiv2 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 0px;
+    background-color: rgba(215, 253, 251, 0.45);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.editedStories {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgba(215, 253, 251, 0.45);
+    text-align: center;
+    margin-top: 3px;
+    h3 {
+        margin-top: 3px;
+    }
 }
 
 body {

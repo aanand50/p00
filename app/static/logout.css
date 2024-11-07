@@ -10,7 +10,12 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20vw;
+    background-color: lightcoral;
+    color: white;
 }
 
 body {
+    h1 {
+        text-align: center;
+    }
     }

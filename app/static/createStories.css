@@ -11,30 +11,50 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20vw;
+    background-color: lightcoral;
+    color: white;
 }
+
+.head {
+    text-align: center;
+}
+
 .containingDiv {
     display: flex;
-    align-items: center;
-    margin-top: 5em;
+    align-items: flex-start;
+    margin-top: 2em;
+    gap: 2em;
 }
 
 .instructions {
+    background-color: lightcyan;
     display: flex;
     flex-direction: column;
-    width: 40vw;    
+    border: 1px solid black;
+    width: 35vw;    
+    margin-left: 3vw;
+    h3 {
+        padding-left: 1em;
+    }
 }
 
 .enterStory {
     display: flex;
-    align-items: center;
     width: 60vw;
     flex-direction: column;
+    .title {
+        background-color: lightgoldenrodyellow;
+        width: 54.5vw;
+        height: 2vw;
+    }
     .text {
-        width: 50vw;
+        padding-bottom: 8.5em;
+        background-color: lightgoldenrodyellow;
+        width: 55vw;
         height: 20vh;
+        box-sizing: border-box;
     }
 }
 
 body {
-    
     }

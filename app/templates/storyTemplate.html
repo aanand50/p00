@@ -29,13 +29,16 @@ time spent:
             </form>
         </div>
     </header>
-    <h1>Title: {{ title }}</h1>
-    {% for row in storyText %}
+
+    <div class="container">
+        <h1>Title: {{ title }}</h1>
+        {% for row in storyText %}
         <div>
             <p>User: {{ row[0] }}</p>
             <p>Text: {{ row[2] }}</p>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
     
     <div class="edit">
     {% if isLoggedIn and new %}

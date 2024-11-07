@@ -11,6 +11,8 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20vw;
+    background-color: lightcoral;
+    color: white;
 }
 
 body {
@@ -22,8 +24,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 5em;
-    margin-bottom: 5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: aliceblue;
 }
 
 .login {
@@ -31,6 +34,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 5em;
-    margin-bottom: 5em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: aliceblue;
 }

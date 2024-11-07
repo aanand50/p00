@@ -26,12 +26,12 @@ time spent:
         </div>
     </header>
 
-    <div>
+    <div class="mission">
         <h1>{{ projectName }}'s Mission</h1>
         <p>{{ description }}</p>
     </div>
 
-    <div>
+    <div class="containingDiv2">
         <div>
             <h1>Create Stories!</h1>
             <ul>
@@ -53,7 +53,8 @@ time spent:
         </div>    
     </div>
 
-    <div>
+    <div class="editedStories">
+        <h3>Edited Stories</h3>
         {% if editedStories != null %}
             {% for story in editedStories %}
                 <h3>{{ story.name }}</h3>

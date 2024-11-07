@@ -26,13 +26,14 @@ time spent:
         </div>
     </header>
 
-    {% for stories in allStories %}
-        <div>
-        {{ stories[0] }}
-            <a href="/storyTemplate?story={{ stories[0] }}">View</a>
-        </form>
+    <div class="storiesContainer">
+        {% for stories in allStories %}
+        <div class="storyCard">
+            <h2>{{ stories[0] }}</h2>
+            <a href="/storyTemplate?story={{ stories[0] }}" class="viewLink">View</a>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 
     <footer>
         <p>Copyright @2024 HAZL</p>    
