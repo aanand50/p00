@@ -20,7 +20,9 @@ def length(a):
 @app.route("/")
 #<<<<<<< HEAD:app/app.py
 def home():
-    return render_template("homePage.html", projectName = "Land of Stories", description = "description")
+    if ("username" in session):
+        return render_template("homePage.html", projectName = "Land of Stories", description = "description")
+    return redirect(url_for("login"))
 #>>>>>>> refs/remotes/origin/main:app.py
 
 @app.route("/response" , methods=['POST'])
@@ -81,6 +83,10 @@ def login():
 def logout():
     session.pop('username',None)
     return render_template("logout.html")
+
+@app.route("/newStories")
+def newStories():
+    return render_template("newStories.html")
 
 db.commit()
 db.close()
