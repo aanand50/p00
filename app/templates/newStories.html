@@ -17,8 +17,8 @@ time spent:
         <div><h1>HAZL</h1></div>
         <div><h1>{{ projectName }}</h1></div>
         <div>
-            <form action="/login">
-                <input type="submit" value="Login">
+            <form action="/">
+                <input type="submit" value="Home">
             </form>
             <form action="/logout">
                 <input type="submit" value="Logout">
@@ -28,25 +28,10 @@ time spent:
 
     {% for stories in allStories %}
         <div>
-            <h3>New Stories!</h3>
-            {% if stories.id >= totalID - 2 %}
-                <div>
-                    <h1>{{ stories.title }}</h1>
-                    <p>{{ stories.description }}</p>
-                    <form action="/storyTemplate">
-                        <input type="submit" value="Login">
-                    </form>
-                </div>
-            <div>
+        {{ stories[0] }}
+            <a href="/storyTemplate?story={{ stories[0] }}">View</a>
+        </form>
         </div>
-        <h1>All Stories</h1>
-        {% else %}
-            <div>
-                <h1>{{ stories.title }}</h1>
-                <p>{{ stories.description }}</p>
-            </div>
-        </div>
-        {% endif %}
     {% endfor %}
 
     <footer>

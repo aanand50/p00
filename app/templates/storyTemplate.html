@@ -21,19 +21,24 @@ time spent:
             <h1>{{ projectName }}</h1>
         </div>
         <div>
-            <form action="/login">
-                <input type="submit" value="Login">
+            <form action="/">
+                <input type="submit" value="Home">
             </form>
             <form action="/logout">
                 <input type="submit" value="Logout">
             </form>
         </div>
     </header>
+    <h1>Title: {{ title }}</h1>
+    {% for row in storyText %}
+        <div>
+            <p>User: {{ row[0] }}</p>
+            <p>Text: {{ row[2] }}</p>
+        </div>
+    {% endfor %}
     
     <div class="edit">
     {% if isLoggedIn %}
-        <input type="text" value="{{ title }}">
-        <input type="text" value="{{ description }}">
         <form action="/newStories">
             <input type="submit" value="Submit Edits">
         </form>

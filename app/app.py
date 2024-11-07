@@ -18,12 +18,8 @@ def length(a):
     return len(a) - len(a.replace(" ", ""))
 
 @app.route("/")
-#<<<<<<< HEAD:app/app.py
 def home():
-    if ("username" in session):
-        return render_template("homePage.html", projectName = "Land of Stories", description = "description")
-    return redirect(url_for("login"))
-#>>>>>>> refs/remotes/origin/main:app.py
+    return render_template("homePage.html", projectName = "Land of Stories", description = "description")
 
 @app.route("/response" , methods=['POST'])
 def register():
@@ -47,10 +43,7 @@ def register():
                 db.commit()
                 db.close()
     return render_template('login.html')
-#<<<<<<< HEAD:app/app.py
-#=======
-#>>>>>>> refs/remotes/origin/main:app.py
-#<<<<<<< HEAD
+
 @app.route('/createStories', methods=['GET', 'POST'])
 def create_story():
     db = sqlite3.connect(DB_FILE)
@@ -58,14 +51,14 @@ def create_story():
     if(request.method == 'POST'):
         if(request.form.get('title') != "" and request.form.get('text') != "" and session.get('username') != None):
             c.execute("SELECT * FROM stories WHERE name = ?;",(request.form.get('title'),))
-            c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('title'),))
-            c.execute("INSERT INTO usertext(user, story, text) VALUES (?,?,?);", (session.get('username'), request.form.get('title'), request.form.get('text')))
-            db.commit()
-            db.close()
-            return redirect(url_for("home"))
+            story = c.fetchone()
+            if(story == None):
+                c.execute("INSERT INTO stories(name) VALUES (?);", (request.form.get('title'),))
+                c.execute("INSERT INTO usertext(user, story, text) VALUES (?,?,?);", (session.get('username'), request.form.get('title'), request.form.get('text')))
+                db.commit()
+                db.close()
+                return redirect(url_for("home"))
     return render_template('createStories.html')
-
-#>>>>>>> 7aed623920691d71386d18c3f24d8cf783f32d8a
 
 def edit():
     text = request.form.get("text")
@@ -89,16 +82,28 @@ def logout():
     session.pop('username',None)
     return render_template("logout.html")
 
-<<<<<<< HEAD
-=======
 @app.route("/newStories")
 def newStories():
-    return render_template("newStories.html")
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    c.execute("SELECT * FROM stories;")
+    story_names = c.fetchall()
+    return render_template("newStories.html", allStories = story_names)
 
-db.commit()
-db.close()
+@app.route("/storyTemplate", methods=['GET'])
+def story_temp():
+    db = sqlite3.connect(DB_FILE)
+    c = db.cursor()
+    if(request.args.get('story') != None):
+        c.execute("SELECT * FROM usertext WHERE story = ?;",(request.args.get('story'),))
+        story_text = c.fetchall()
+        if(session.get('username') != None):
+            loggedin = True
+        else:
+            loggedin = False
+        return render_template("storyTemplate.html", storyText=story_text,isLoggedIn = loggedin,title=request.args.get('story'))
+    return render_template("newStories.html", allStories = story_names)
 
->>>>>>> refs/remotes/origin/main
 if __name__ == "__main__":
     app.debug = True
     app.run()
