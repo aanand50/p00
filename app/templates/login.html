@@ -16,34 +16,26 @@ time spent:
     <header>
         <div><h1>HAZL</h1></div>
         <div><h1>{{ projectName }}</h1></div>
+    </header>
         <div>
-            <form action="/login">
-                <input type="submit" value="Login">
-            </form>
-            <form action="/logout">
-                <input type="submit" value="Logout">
+            <form action="/">
+                <input type="submit" value="Home">
             </form>
         </div>
-    </header>
-
-    <div>
-        <h3>Instructions</h3>
-        <ul>
-            {% for instructions in instructions %}
-            <li>{{ instructions }}</li>
-            {% endfor %}
-        </ul>
+        <div class="signup">
+        <h1>Sign Up</h1>
+        <form action="/response" method="POST">
+            <input type="text" name="username" placeholder="Make a Username">
+            <input type="text" name="password" placeholder="Make a Password">
+            <input type="submit" value="Sign Up">
+        </form>
     </div>
-
-    <div>
-        <form action="" method="POST">
-            <div>
-                <input type="text" name="title" placeholder="Enter Title">
-            </div>
-            <div>
-                <input type="text" name="text" placeholder="Enter Story Text">
-            </div>
-            <input type="submit" value="Submit">
+    <div class="login">
+        <h1>Log In</h1>
+        <form action="/response" method="POST">
+            <input type="text" name="usernameL" placeholder="Username">
+            <input type="text" name="passwordL" placeholder="Password">
+            <input type="submit" value="Login">
         </form>
     </div>
 
